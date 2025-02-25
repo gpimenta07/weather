@@ -1,3 +1,5 @@
+
+
 const key = "b1bb660f03946f4b66d7383014441369";
 
 function showApi(dados) {
