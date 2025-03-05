@@ -1,14 +1,17 @@
-
-
 const key = "b1bb660f03946f4b66d7383014441369";
 
 function showApi(dados) {
   document.querySelector("#city").innerHTML = dados.name;
-  document.querySelector("#celsius").innerHTML = Math.floor(dados.main.temp) + '°C';
+  document.querySelector("#celsius").innerHTML =
+    Math.floor(dados.main.temp) + "°C";
   document.querySelector("#humidity").innerHTML =
     "Umidade: " + dados.main.humidity + "%";
   document.querySelector("#description").innerHTML =
     dados.weather[0].description;
+  const clouds = dados.weather[0].icon;
+  document.querySelector(
+    "#cloud"
+  ).src = `https://openweathermap.org/img/wn/${clouds}.png`;
   console.log(dados);
 }
 
